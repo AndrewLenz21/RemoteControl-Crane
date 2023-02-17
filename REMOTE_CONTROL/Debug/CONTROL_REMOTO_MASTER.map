@@ -1,0 +1,184 @@
+******************************************************************************
+                  TI ARM Linker PC v18.1.4                     
+******************************************************************************
+>> Linked Sat Nov 16 23:58:56 2019
+
+OUTPUT FILE NAME:   <CONTROL_REMOTO_MASTER.out>
+ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 00000f41
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  00000f84  0003f07c  R  X
+  SRAM                  20000000   00008000  00000200  00007e00  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00000f84   00000f84    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    00000d18   00000d18    r-x .text
+20000000    20000000    00000200   00000000    rw-
+  20000000    20000000    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     tm4c123gh6pm_startup_ccs.obj (.intvecs)
+
+.text      0    0000026c    00000d18     
+                  0000026c    00000638     main.obj (.text)
+                  000008a4    0000039c     TivaES.obj (.text)
+                  00000c40    00000300     uart.obj (.text)
+                  00000f40    00000030     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.text:_c_int00_noinit_noargs:_c_int00_noinit_noargs)
+                  00000f70    0000000c     tm4c123gh6pm_startup_ccs.obj (.text)
+                  00000f7c    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  00000f80    00000004                                   : exit.c.obj (.text:abort:abort)
+
+.cinit     0    00000000    00000000     UNINITIALIZED
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.stack     0    20000000    00000200     UNINITIALIZED
+                  20000000    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  20000004    000001fc     --HOLE--
+
+MODULE SUMMARY
+
+       Module                         code   ro data   rw data
+       ------                         ----   -------   -------
+    ..\
+       TivaES.obj                     924    0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         924    0         0      
+                                                              
+    .\
+       main.obj                       1592   0         0      
+       uart.obj                       768    0         0      
+       tm4c123gh6pm_startup_ccs.obj   12     620       0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         2372   620       0      
+                                                              
+    C:\ti\ccsv8\tools\compiler\ti-cgt-arm_18.1.4.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       boot_cortex_m.c.obj            48     0         0      
+       exit.c.obj                     4      0         0      
+       pre_init.c.obj                 4      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         56     0         0      
+                                                              
+       Stack:                         0      0         512    
+    +--+------------------------------+------+---------+---------+
+       Grand Total:                   3352   620       512    
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                          
+-------   ----                          
+00000f81  C$$EXIT                       
+000002d9  ConfiguraPortC                
+00000321  ConfiguraPortD                
+0000026d  ConfiguraPortF                
+00000369  ConfiguraUART5                
+00000417  ConfiguracionADC              
+00000f71  ResetISR                      
+000009e5  TivaES_EsperaPresionarPulsador
+00000a15  TivaES_EsperaPulsador         
+00000a6d  TivaES_EsperaPulsadores       
+000009fd  TivaES_EsperaSoltarPulsador   
+000008d5  TivaES_Inicializa             
+00000955  TivaES_LedColor               
+00000977  TivaES_LedParpadeo            
+000009bb  TivaES_LeePulsador            
+00000b05  TivaES_SolicitaNumero         
+00000a2d  TivaES_SondeaPulsador         
+000003f1  TransmiteBluetooh             
+00000d57  UART_EsperaCadena             
+00000cdb  UART_EsperaDato               
+00000df9  UART_EsperaNumeroB10          
+00000c41  UART_Inicializa               
+00000d47  UART_SiguienteLinea           
+00000cf7  UART_SondeaRx                 
+00000dc9  UART_TransmiteCadena          
+00000d21  UART_TransmiteDato            
+00000e6f  UART_TransmiteNumeroB10       
+20000200  __STACK_END                   
+00000200  __STACK_SIZE                  
+20000200  __STACK_TOP                   
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+00000000  __TI_static_base__            
+ffffffff  __binit__                     
+ffffffff  __c_args__                    
+UNDEFED   __mpu_init                    
+20000000  __stack                       
+00000f41  _c_int00_noinit_noargs        
+00000f7d  _system_pre_init              
+00000f81  abort                         
+ffffffff  binit                         
+0000049d  capturaADCdeXeY               
+00000000  g_pfnVectors                  
+00000591  main                          
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                          
+-------   ----                          
+00000000  __TI_static_base__            
+00000000  g_pfnVectors                  
+00000200  __STACK_SIZE                  
+0000026d  ConfiguraPortF                
+000002d9  ConfiguraPortC                
+00000321  ConfiguraPortD                
+00000369  ConfiguraUART5                
+000003f1  TransmiteBluetooh             
+00000417  ConfiguracionADC              
+0000049d  capturaADCdeXeY               
+00000591  main                          
+000008d5  TivaES_Inicializa             
+00000955  TivaES_LedColor               
+00000977  TivaES_LedParpadeo            
+000009bb  TivaES_LeePulsador            
+000009e5  TivaES_EsperaPresionarPulsador
+000009fd  TivaES_EsperaSoltarPulsador   
+00000a15  TivaES_EsperaPulsador         
+00000a2d  TivaES_SondeaPulsador         
+00000a6d  TivaES_EsperaPulsadores       
+00000b05  TivaES_SolicitaNumero         
+00000c41  UART_Inicializa               
+00000cdb  UART_EsperaDato               
+00000cf7  UART_SondeaRx                 
+00000d21  UART_TransmiteDato            
+00000d47  UART_SiguienteLinea           
+00000d57  UART_EsperaCadena             
+00000dc9  UART_TransmiteCadena          
+00000df9  UART_EsperaNumeroB10          
+00000e6f  UART_TransmiteNumeroB10       
+00000f41  _c_int00_noinit_noargs        
+00000f71  ResetISR                      
+00000f7d  _system_pre_init              
+00000f81  C$$EXIT                       
+00000f81  abort                         
+20000000  __stack                       
+20000200  __STACK_END                   
+20000200  __STACK_TOP                   
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+ffffffff  __binit__                     
+ffffffff  __c_args__                    
+ffffffff  binit                         
+UNDEFED   __mpu_init                    
+
+[45 symbols]
