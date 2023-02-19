@@ -9,7 +9,7 @@ REMOTE CONTROL
  CRANE:
 
 - C language
-- Tiva C, tm4123gh6pm
+- Tiva C, tm4c123gh6pm
 - UART (Universal Asynchronous Receiver/Transmitter)
 - GPIO (General Purpose Input/Output)
 - PWM (Pulse Width Modulation)
